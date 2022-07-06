@@ -1,0 +1,16 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 2rem;
+  text-align: center;
+
+  .stats__number {
+    font-size: 3.5rem;
+  }
+
+  .stats__label {
+    margin-top: -1rem;
+    font-size: 1.1rem;
+  }
+}

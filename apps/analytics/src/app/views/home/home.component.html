@@ -1,0 +1,23 @@
+<h1>Veeva Page View analytics</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Page ID</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngIf="pages$ | async as pages">
+    <tr *ngFor="let page of pages">
+      <td>{{ page }}</td>
+      <td>
+        <a routerLink="/page/{{ page }}">View</a>
+      </td>
+    </tr>
+
+    <tr *ngIf="pages?.length === 0">
+      <td></td>
+      <td>No results</td>
+    </tr>
+  </tbody>
+</table>

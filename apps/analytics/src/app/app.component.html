@@ -1,0 +1,17 @@
+<veeva-test-header></veeva-test-header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<div class="ngb-toasts" aria-live="polite" aria-atomic="true">
+  <ngb-toast
+    *ngFor="let toast of loggerService.toasts"
+    [class]="toast.classname"
+    [autohide]="true"
+    [delay]="2000"
+    (hidden)="loggerService.remove(toast.id)"
+  >
+    <span>{{ toast.label }}</span>
+  </ngb-toast>
+</div>

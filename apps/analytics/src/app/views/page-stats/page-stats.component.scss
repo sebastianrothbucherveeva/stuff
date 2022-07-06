@@ -1,0 +1,20 @@
+:host {
+  h1 {
+    color: lightgray;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    width: fit-content;
+
+    .page-stats__key-numbers {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+  }
+}

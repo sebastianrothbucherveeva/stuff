@@ -1,0 +1,19 @@
+<ng-container *ngIf="isLoaded">
+  <h1>Page: {{ pageName }}</h1>
+
+  <section>
+    <div class="page-stats__stats">
+      <div class="page-stats__key-numbers">
+        <veeva-test-stats
+          *ngIf="activeVisitorsStats$ | async as activeVisitorsStats"
+          [stat]="activeVisitorsStats.value"
+          label="Active users in last {{
+            activeVisitorsStats.periodDuration | durationSuffix
+          }}"
+        ></veeva-test-stats>
+      </div>
+
+      <veeva-test-graph [data]="data" yAxisLabel="Views"></veeva-test-graph>
+    </div>
+  </section>
+</ng-container>
